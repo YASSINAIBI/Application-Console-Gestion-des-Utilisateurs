@@ -44,9 +44,9 @@ public class Utilisateur extends personne {
 	}
 
 	public String affiche() {
-		return "Utilisateur [\n Profil: " + getProfil() + "\n Login: " + "\n MotDePass: " + getMotDePass() + "\n Service: " + getService()
+		return "\n Login: " + "\n MotDePass: " + getMotDePass() + "\n Service: " + getService()
 				+ "\n Matricule: " + getMatricule() + "\n Nom: " + getNom() + "\n Prenom: " + getPrenom()
-				+ "\n Email: " + getEmail() + "\n Telephone: " + getTelephone() + "\n Salaire: " + calculerSalaire() + " DH";
+				+ "\n Email: " + getEmail() + "\n Telephone: " + getTelephone() + "\n Salaire: " + calculerSalaire() + " DH \n";
 	}
 }
 

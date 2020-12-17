@@ -23,7 +23,12 @@ public class Profil {
 	public void setLibelle(String libelle) {
 		this.libelle = libelle;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "Id: " + getId() + "\nCode: " + getCode() + "\nlibelle: " + getLibelle();
+	}
 }
+
+
 

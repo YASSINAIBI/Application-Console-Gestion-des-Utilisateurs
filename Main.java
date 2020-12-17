@@ -8,11 +8,13 @@ public class Main {
 	public static void main(String[] args) {
 
 		int input;
+		int id = 1;
 		boolean Quit = false;
 		Scanner scanner = new Scanner(System.in);
 
 		ArrayList<Utilisateur> listOfUser = new ArrayList<Utilisateur>();
 		ArrayList<Utilisateur> listOfManager = new ArrayList<Utilisateur>();
+		ArrayList<String> listOfProfils = new ArrayList<>();
 
 		while(Quit != true) {
 			System.out.println("1- utilisateurs");
@@ -27,8 +29,6 @@ public class Main {
 					System.out.println("2- affichier tous les utilisateurs");
 					System.out.println("3- annuler");
 					int	SelectedUser = scanner.nextInt();
-					
-					int id = 1;
 
 					switch(SelectedUser) {
 						case 1:
@@ -53,22 +53,22 @@ public class Main {
 								
 								case 2:
 									utilisateur.setProfil("MN");
-									profil.setLibelle("CP");
+									profil.setLibelle("MN");
 								break;
 								
 								case 3:
 									utilisateur.setProfil("DP");
-									profil.setLibelle("CP");
+									profil.setLibelle("DP");
 								break;
 								
 								case 4:
 									utilisateur.setProfil("DHR");
-									profil.setLibelle("CP");
+									profil.setLibelle("DHR");
 								break;
 								
 								case 5:
 									utilisateur.setProfil("DG");
-									profil.setLibelle("CP");
+									profil.setLibelle("DG");
 								break;
 							}
 							//
@@ -118,17 +118,19 @@ public class Main {
 
 							listOfUser.add(utilisateur);
 							
+							listOfProfils.add("the profile id is: " + id + "\nprofil: " + profil.getLibelle() + "\n"  + utilisateur.affiche());
+
 							id++;
 						break;
 						
 						case 2:
-							for(Utilisateur object:listOfUser) {
-								System.out.println(object.affiche());
+							for(String object:listOfProfils) {
+								System.out.println(object);
 							}
 						break;
-						
+
 						case 3:
-						
+
 						break;
 					}
 

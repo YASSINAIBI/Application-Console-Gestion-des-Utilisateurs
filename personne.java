@@ -46,6 +46,5 @@ public class personne {
 	public void setSalaire(double salaire) {
 		this.salaire = salaire;
 	}
-	
-
 }
+
